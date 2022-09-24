@@ -1,0 +1,61 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add package.json
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+
+npm manifest: 
+  {
+    "private": true,
+    "sideEffects": false,
+    "scripts": {
+      "build": "npm run build:css && remix build",
+      "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
+      "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
+      "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css"
+    },
+    "dependencies": {
+      "@remix-run/node": "^1.7.2",
+      "@remix-run/react": "^1.7.2",
+      "@remix-run/vercel": "^1.7.2",
+      "@vercel/node": "^2.4.4",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+      "@remix-run/dev": "^1.7.2",
+      "@remix-run/eslint-config": "^1.7.2",
+      "@remix-run/serve": "^1.7.2",
+      "@types/react": "^18.0.15",
+      "@types/react-dom": "^18.0.6",
+      "autoprefixer": "^10.4.12",
+      "concurrently": "^7.4.0",
+      "eslint": "^8.23.1",
+      "npm-run-all": "^4.1.5",
+      "postcss": "^8.4.16",
+      "tailwindcss": "^3.1.8",
+      "typescript": "^4.7.4"
+    },
+    "engines": {
+      "node": ">=14"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
